@@ -3,7 +3,11 @@ COLOR_NAME = {"Amaranth": "#e52b50", "Aqua": "#00ffff",
               "Azure1": "#f0ffff", "Bittersweet": "#fe6f5e",
               "Black": "#000000", "Blond": "#faf0be",
               "Blue1": "#0000ff", "Blue2": "#0000ee"}
-choice = input("Enter a color name: ").title()
-while choice != "":
-    print("The code for \"{}\" is {}".format(choice, COLOR_NAME.get(choice)))
-    choice = input("Enter a color name: ").title()
+print(COLOR_NAME)
+colour_name = input("Enter color name: ").title()
+while colour_name != '':
+    try:
+        print(colour_name, "is", COLOR_NAME[colour_name])
+    except KeyError:
+        print("Invalid color name")
+    colour_name = input("Enter color name: ").title()
