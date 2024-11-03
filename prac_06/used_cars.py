@@ -16,9 +16,11 @@ def main():
 
     limo = Car(100, "Limo")
     limo.add_fuel(20)
-    print(limo.fuel)
+    print(f"Fuel after adding 20 units: {limo.fuel}")
     limo.drive(115)
+    print(f"Fuel after driving 115 km: {limo.fuel}")
     print(limo)
 
 
-main()
+if __name__ == '__main__':
+    main()
